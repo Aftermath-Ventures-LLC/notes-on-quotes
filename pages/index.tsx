@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <Link href="/about">About</Link>
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
