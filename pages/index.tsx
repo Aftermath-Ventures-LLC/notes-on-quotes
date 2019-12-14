@@ -1,12 +1,7 @@
 import React from 'react';
-import GlobalHeader from '../components/GlobalHeader';
 
 const Home = () => {
-  return (
-    <>
-      <GlobalHeader />
-    </>
-  );
+  return <>Page</>;
 };
 
 export default Home;

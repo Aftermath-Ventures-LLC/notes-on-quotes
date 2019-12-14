@@ -1,9 +1,10 @@
 export const theme = {
   breakpoints: ['768px', '992px', '1200px'],
   colors: {
+    accent: '#2c74d6',
     background: '#fcfcfc',
     backgroundAlt: '#f6f6f6',
-    primary: '#2c74d6',
+    primary: '#444',
     text: '#444',
     textAlt: '#757575',
   },
@@ -12,6 +13,7 @@ export const theme = {
   },
   fontSizes: [12, 14, 16, 20, 24, 32],
   sizes: {
+    articleContainer: 680,
     contentContainer: 984,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
