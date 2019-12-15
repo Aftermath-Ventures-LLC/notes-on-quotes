@@ -1,8 +1,8 @@
 import React from 'react';
-import Divider from '../Divider';
+import Divider from '../../Divider';
 import { Content, HeaderContainer, ProfileImage, Quote, Title } from './styles';
 
-const ArticleHeader = () => {
+const Header = () => {
   return (
     <HeaderContainer>
       <ProfileImage src="http://placehold.it/240x240" />
@@ -20,4 +20,4 @@ const ArticleHeader = () => {
   );
 };
 
-export default ArticleHeader;
+export default Header;
