@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
-import { color, fontSize, space, bp } from '../../styles/theme';
-import Container from '../Container';
+import { color, fontSize, space, bp } from '../../../styles/theme';
+import Container from '../../Container';
 
 export const HeaderContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   marginTop: space(4),
-  paddingBottom: space(4),
 
   [bp(0)]: {
     flexDirection: 'row',
     alignItems: 'flex-end',
+    marginBottom: space(4),
     borderBottom: 0,
   },
 });

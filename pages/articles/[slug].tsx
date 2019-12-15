@@ -1,12 +1,12 @@
 import React from 'react';
-import ArticleHeader from '../../components/ArticleHeader';
+import Article from '../../components/Article';
 
-const Article = () => {
+const ArticlePage = () => {
   return (
     <>
-      <ArticleHeader />
+      <Article />
     </>
   );
 };
 
-export default Article;
+export default ArticlePage;

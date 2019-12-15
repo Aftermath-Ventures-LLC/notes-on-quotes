@@ -13,7 +13,7 @@ export const theme = {
   },
   fontSizes: [12, 14, 16, 20, 24, 32],
   sizes: {
-    articleContainer: 680,
+    articleContainer: 744,
     contentContainer: 984,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
