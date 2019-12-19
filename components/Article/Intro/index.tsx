@@ -1,7 +1,13 @@
-import React from 'react';
+import { format } from 'date-fns';
+import React, { FC } from 'react';
 import { FaFacebook, FaShare, FaTwitter } from 'react-icons/fa';
 import Divider from '../../Divider';
-import { Content, Header, IntroContainer, SocialShareIcons } from './styles';
+import { Content, Header, SocialShareIcons } from './styles';
+
+interface IntroProps {
+  intro: string;
+  publishedAt: string;
+}
 
 const POPUP_HEIGHT = 450;
 const POPUP_WIDTH = 600;
@@ -22,7 +28,7 @@ function getSocialShareUrl(type: string) {
   }
 }
 
-const Intro = () => {
+const Intro: FC<IntroProps> = ({ intro, publishedAt }) => {
   const handleShareClick = (type: string) => {
     window.open(
       getSocialShareUrl(type),
@@ -42,40 +48,18 @@ const Intro = () => {
   };
 
   return (
-    <IntroContainer>
+    <>
       <Header>
         <SocialShareIcons>
           <FaFacebook onClick={() => handleShareClick('facebook')} />
           <FaTwitter onClick={() => handleShareClick('twitter')} />
           <FaShare onClick={() => handleShareClick('mail')} />
         </SocialShareIcons>
-        <span>Published September 2, 2019</span>
+        <span>{format(new Date(publishedAt), 'LLLL d, yyyy')}</span>
       </Header>
-      <Content>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-          asperiores amet doloremque, cupiditate ex corrupti veniam. Tempore
-          reprehenderit aspernatur quidem, aperiam eveniet saepe facilis
-          inventore nesciunt molestiae ullam impedit consequuntur?
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores
-          dolorem at itaque cum voluptas quidem perferendis iste rerum placeat
-          commodi nemo quos ratione recusandae, nesciunt assumenda corporis,
-          dolor rem minus!Perspiciatis saepe aut magni mollitia, dignissimos,
-          ullam quasi cumque qui facilis aliquid, pariatur voluptates. Autem
-          deserunt eos quasi, excepturi magnam odio incidunt dicta atque, porro
-          labore tempora eaque? Cumque, sit.
-        </p>
-        <p>
-          This print interview has been edited, condensed, and annotated. The
-          podcast version is currently private – contact{' '}
-          <a href="mailto:notesonquotes@gmail.com">notesonquotes@gmail.com</a>{' '}
-          with inquiries.
-        </p>
-      </Content>
+      <Content dangerouslySetInnerHTML={{ __html: intro }} />
       <Divider isHiddenDesktop />
-    </IntroContainer>
+    </>
   );
 };
 

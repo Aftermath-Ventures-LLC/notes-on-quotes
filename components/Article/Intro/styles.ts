@@ -1,10 +1,5 @@
 import styled from '@emotion/styled';
-import Container from '../../Container';
-import { size, space, fontSize, bp, color } from '../../../styles/theme';
-
-export const IntroContainer = styled(Container)({
-  maxWidth: size('articleContainer'),
-});
+import { bp, color, fontSize, space } from '../../../styles/theme';
 
 export const Header = styled.div({
   display: 'flex',
