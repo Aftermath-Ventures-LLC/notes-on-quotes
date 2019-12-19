@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Divider from '../../Divider';
 import { Content, HeaderContainer, ProfileImage, Quote, Title } from './styles';
 
-const Header = () => {
+interface HeaderProps {
+  citation: string;
+  profileImage: {
+    url: string;
+    alt: string;
+  };
+  quote: string;
+  title: string;
+}
+
+const Header: FC<HeaderProps> = ({ title, profileImage, quote }) => {
   return (
     <HeaderContainer>
-      <ProfileImage src="http://placehold.it/240x240" />
+      <ProfileImage src={profileImage.url} />
       <Content>
-        <Title>Lorem ipsum dolar</Title>
-        <Quote>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-          obcaecati neque quam molestiae nemo et velit voluptas ducimus eveniet
-          labore quo nesciunt animi. Asperiores reiciendis magnam, sapiente non
-          quidem at.
-        </Quote>
+        <Title>{title}</Title>
+        <Quote dangerouslySetInnerHTML={{ __html: quote }} />
       </Content>
       <Divider isHiddenDesktop />
     </HeaderContainer>

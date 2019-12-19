@@ -55,12 +55,12 @@ export const Quote = styled.blockquote({
   textAlign: 'center',
   fontStyle: 'italic',
 
-  '&:before': {
-    content: 'open-quote',
+  'p:first-of-type': {
+    marginTop: 0,
   },
 
-  '&:after': {
-    content: 'close-quote',
+  'p:last-of-type': {
+    marginBottom: 0,
   },
 
   [bp(0)]: {
