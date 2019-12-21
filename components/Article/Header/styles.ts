@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { color, fontSize, space, bp } from '../../../styles/theme';
-import Container from '../../Container';
+import { Container } from '../../../elements/Container';
+import { bp, color, fontSize, space } from '../../../styles/theme';
 
 export const HeaderContainer = styled(Container)({
   display: 'flex',
