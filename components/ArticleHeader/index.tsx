@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Divider from '../../Divider';
+import Divider from '../Divider';
 import { Content, HeaderContainer, ProfileImage, Quote, Title } from './styles';
 
 interface HeaderProps {
@@ -12,10 +12,10 @@ interface HeaderProps {
   title: string;
 }
 
-const Header: FC<HeaderProps> = ({ title, profileImage, quote }) => {
+const ArticleHeader: FC<HeaderProps> = ({ title, profileImage, quote }) => {
   return (
     <HeaderContainer>
-      <ProfileImage src={profileImage.url} />
+      <ProfileImage alt={profileImage.alt} src={profileImage.url} />
       <Content>
         <Title>{title}</Title>
         <Quote dangerouslySetInnerHTML={{ __html: quote }} />
@@ -25,4 +25,4 @@ const Header: FC<HeaderProps> = ({ title, profileImage, quote }) => {
   );
 };
 
-export default Header;
+export default ArticleHeader;

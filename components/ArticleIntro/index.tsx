@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import React, { FC } from 'react';
 import { FaFacebook, FaShare, FaTwitter } from 'react-icons/fa';
-import Divider from '../../Divider';
+import Divider from '../Divider';
 import { Content, Header, SocialShareIcons } from './styles';
 
 interface IntroProps {
@@ -28,7 +28,7 @@ function getSocialShareUrl(type: string) {
   }
 }
 
-const Intro: FC<IntroProps> = ({ intro, publishedAt }) => {
+const ArticleIntro: FC<IntroProps> = ({ intro, publishedAt }) => {
   const handleShareClick = (type: string) => {
     window.open(
       getSocialShareUrl(type),
@@ -63,4 +63,4 @@ const Intro: FC<IntroProps> = ({ intro, publishedAt }) => {
   );
 };
 
-export default Intro;
+export default ArticleIntro;

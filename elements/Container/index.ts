@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { bp, size, space } from '../../styles/theme';
 
-export const Container = styled.div({
+const Container = styled.div({
   margin: '0 auto',
   maxWidth: size('contentContainer'),
   paddingLeft: space(3),
@@ -12,3 +12,5 @@ export const Container = styled.div({
     paddingLeft: space(4),
   },
 });
+
+export default Container;

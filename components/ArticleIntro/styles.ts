@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { bp, color, fontSize, space } from '../../../styles/theme';
+import { bp, color, fontSize, space } from '../../styles/theme';
 
 export const Header = styled.div({
   display: 'flex',

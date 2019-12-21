@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { RichText } from 'prismic-dom';
 import React from 'react';
 import Content from '../components/Content';
-import { Container } from '../elements/Container';
+import Container from '../elements/Container';
 import { FetchAbout, FETCH_ABOUT } from '../graphql/fetchAbout';
 import { withApollo } from '../lib/withApollo';
 
