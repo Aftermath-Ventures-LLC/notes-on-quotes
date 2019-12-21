@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
+import Content from '../Content';
 import Header from './Header';
 import Intro from './Intro';
 import { ArticleContainer } from './styles';
-import Content from './Content';
 
 interface ArticleProps {
   citation: string;

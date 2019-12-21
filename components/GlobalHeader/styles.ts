@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
+import { Container } from '../../elements/Container';
 import { bp, color, fontSize, space } from '../../styles/theme';
-import Container from '../Container';
 
 export const Navigation = styled.div({
   position: 'relative',
