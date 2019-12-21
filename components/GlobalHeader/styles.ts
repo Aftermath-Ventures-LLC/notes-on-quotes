@@ -8,6 +8,7 @@ export const Navigation = styled.div({
 });
 
 export const NavContainer = styled(Container)({
+  flexDirection: 'row',
   alignItems: 'center',
   display: 'flex',
   justifyContent: 'space-between',

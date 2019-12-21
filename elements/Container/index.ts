@@ -2,6 +2,9 @@ import styled from '@emotion/styled';
 import { bp, size, space } from '../../styles/theme';
 
 const Container = styled.div({
+  display: 'flex',
+  width: '100%',
+  flexDirection: 'column',
   margin: '0 auto',
   maxWidth: size('contentContainer'),
   paddingLeft: space(3),
