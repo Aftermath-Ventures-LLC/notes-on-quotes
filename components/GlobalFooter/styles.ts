@@ -4,15 +4,18 @@ import { fontSize, space, bp } from '../../styles/theme';
 
 export const FooterContainer = styled(Container)({
   flexDirection: 'column',
+  marginTop: space(6),
   paddingTop: space(2),
   paddingBottom: space(2),
   fontSize: fontSize(0),
+  textAlign: 'center',
 
   [bp(0)]: {
     flexDirection: 'row',
-    minHeight: space(5),
-    alignItems: 'center',
+    minHeight: space(6),
     fontSize: fontSize(1),
+    alignItems: 'center',
+    textAlign: 'left',
   },
 });
 
