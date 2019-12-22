@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { color, space, fontSize, bp } from '../../styles/theme';
+import { bp, color, fontSize, space } from '../../styles/theme';
 
 export const Container = styled.a({
   position: 'relative',
@@ -15,10 +15,6 @@ export const Container = styled.a({
 
   [bp(0)]: {
     flexDirection: 'row',
-  },
-
-  '&:last-child': {
-    marginBottom: 0,
   },
 
   '&::before': {
@@ -60,6 +56,7 @@ export const Content = styled.div({
 
 export const Title = styled.h2({
   marginTop: 0,
+  marginBottom: 0,
   fontSize: fontSize(2),
   textAlign: 'center',
 
