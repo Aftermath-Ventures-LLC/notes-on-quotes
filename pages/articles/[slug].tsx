@@ -6,6 +6,7 @@ import React from 'react';
 import ArticleHeader from '../../components/ArticleHeader';
 import ArticleIntro from '../../components/ArticleIntro';
 import Content from '../../components/Content';
+import SubscribeCta from '../../components/SubscribeCta';
 import ArticleContainer from '../../elements/ArticleContainer';
 import { FetchArticle, FETCH_ARTICLE } from '../../graphql/fetchArticle';
 import { withApollo } from '../../lib/withApollo';
@@ -43,6 +44,7 @@ const ArticlePage = () => {
           intro={RichText.asHtml(article.intro)}
           publishedAt={article._meta.publishedAt}
         />
+        <SubscribeCta />
         <Content content={RichText.asHtml(article.content)} />
       </ArticleContainer>
     </>
