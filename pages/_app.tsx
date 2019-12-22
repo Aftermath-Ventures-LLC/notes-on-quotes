@@ -29,6 +29,10 @@ const globalStyles = css`
       flex-direction: column;
       height: 100%;
     }
+
+    &.overlayIsOpen {
+      overflow: hidden;
+    }
   }
 
   a {

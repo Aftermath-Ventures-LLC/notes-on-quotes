@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { MouseEvent, useEffect, useState } from 'react';
 import ActiveLink from '../ActiveLink';
 import {
   Hamburger,
@@ -10,18 +10,37 @@ import {
   NavLabel,
   NavLink,
   NavLinks,
+  Overlay,
   WordMark,
 } from './styles';
 
 const GlobalHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleMenuButtonClick = () => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('overlayIsOpen');
+    } else {
+      document.body.classList.remove('overlayIsOpen');
+    }
+
+    return () => {
+      document.body.classList.remove('overlayIsOpen');
+    };
+  }, [isOpen]);
+
+  const handleMenuButtonClick = (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+
     setIsOpen(!isOpen);
   };
 
+  const handleContainerClick = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Navigation>
+    <Navigation onClick={handleContainerClick}>
       <NavContainer>
         <Link href="/" passHref>
           <WordMark>Notes on Quotes</WordMark>
@@ -41,6 +60,7 @@ const GlobalHeader = () => {
           </NavLink>
         </NavLinks>
       </NavContainer>
+      {isOpen && <Overlay />}
     </Navigation>
   );
 };
