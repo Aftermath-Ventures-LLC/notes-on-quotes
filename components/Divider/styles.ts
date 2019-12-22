@@ -8,8 +8,8 @@ export const Bar = styled.hr<{
   display: isHiddenMobile ? 'none' : 'block',
   width: '100%',
   height: 2,
-  marginTop: space(4),
-  marginBottom: space(4),
+  marginTop: space(5),
+  marginBottom: space(5),
   backgroundColor: color('primary'),
   border: 0,
 

@@ -11,8 +11,8 @@ const Container = styled.div({
   paddingRight: space(3),
 
   [bp(0)]: {
-    paddingRight: space(4),
-    paddingLeft: space(4),
+    paddingRight: space(5),
+    paddingLeft: space(5),
   },
 });
 

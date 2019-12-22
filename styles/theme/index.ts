@@ -16,7 +16,7 @@ export const theme = {
     articleContainer: 744,
     contentContainer: 984,
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 4, 8, 16, 24, 32, 64, 128, 256],
 };
 
 theme.fontSizes['2.5'] = 18;
