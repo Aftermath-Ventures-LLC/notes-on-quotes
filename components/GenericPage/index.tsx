@@ -1,19 +1,16 @@
 import { useQuery } from '@apollo/react-hooks';
-import Error from 'next/error';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { RichText } from 'prismic-dom';
-import React from 'react';
-import Content from '../components/Content';
-import Container from '../elements/Container';
-import { FetchPage, FETCH_PAGE } from '../graphql/fetchPage';
-import { withApollo } from '../lib/withApollo';
+import React, { FC } from 'react';
+import Container from '../../elements/Container';
+import { FetchPage, FETCH_PAGE } from '../../graphql/fetchPage';
+import Content from '../Content';
 
-const GenericPage = () => {
-  const {
-    query: { slug },
-  } = useRouter();
+interface GenericPageProps {
+  slug: string;
+}
 
+const GenericPage: FC<GenericPageProps> = ({ slug }) => {
   const { data, loading } = useQuery<FetchPage>(FETCH_PAGE, {
     variables: {
       slug,
@@ -26,7 +23,7 @@ const GenericPage = () => {
 
   const { page } = data;
 
-  return page ? (
+  return (
     <>
       <Head>
         <title>{page.pageTitle}</title>
@@ -36,9 +33,7 @@ const GenericPage = () => {
         <Content content={RichText.asHtml(page.content)} />
       </Container>
     </>
-  ) : (
-    <Error statusCode={404} />
   );
 };
 
-export default withApollo(GenericPage);
+export default GenericPage;
