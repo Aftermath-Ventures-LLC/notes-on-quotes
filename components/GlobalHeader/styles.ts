@@ -6,9 +6,12 @@ export const Navigation = styled.header({
   position: 'relative',
   zIndex: 100,
   boxShadow: '0 0 4px 1px rgba(0, 0, 0, 0.16)',
+  backgroundColor: color('background'),
 });
 
 export const NavContainer = styled(Container)({
+  position: 'relative',
+  zIndex: 10,
   flexDirection: 'row',
   alignItems: 'center',
   display: 'flex',
@@ -101,6 +104,7 @@ export const NavLink = styled.li({
   [bp(0)]: {
     display: 'inline-block',
     marginLeft: space(2),
+    backgroundColor: 'transparent',
   },
 });
 
@@ -118,6 +122,17 @@ export const NavLabel = styled.a<{ isActive?: boolean }>(({ isActive }) => ({
     display: 'inline-block',
     padding: space(1),
     fontSize: fontSize('2.5'),
-    borderBottom: 'none',
+    border: 'none',
   },
 }));
+
+export const Overlay = styled.div({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: color('background'),
+  backdropFilter: 'blur(4px)',
+  opacity: 0.9,
+});
