@@ -95,6 +95,7 @@ export const NavLinks = styled.ul<{ isOpen: boolean }>(({ isOpen }) => ({
 
 export const NavLink = styled.li({
   display: 'block',
+  backgroundColor: color('background'),
 
   [bp(0)]: {
     display: 'inline-block',
@@ -109,6 +110,7 @@ export const NavLabel = styled.a<{ isActive?: boolean }>(({ isActive }) => ({
   fontWeight: 'bold',
   fontSize: fontSize(4),
   padding: space(3),
+  borderTop: `1px solid ${color('backgroundAlt')}`,
   borderBottom: `1px solid ${color('backgroundAlt')}`,
 
   [bp(0)]: {
