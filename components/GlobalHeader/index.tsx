@@ -26,7 +26,7 @@ const GlobalHeader = () => {
         <Link href="/" passHref>
           <WordMark>Notes on Quotes</WordMark>
         </Link>
-        <Hamburger onClick={handleMenuButtonClick}>
+        <Hamburger aria-label="Open the menu" onClick={handleMenuButtonClick}>
           <HamburgerBars>
             {[1, 2, 3, 4].map(index => (
               <HamburgerBar isOpen={isOpen} key={index} />
@@ -37,11 +37,6 @@ const GlobalHeader = () => {
           <NavLink>
             <ActiveLink href="/about" passHref>
               <NavLabel>About</NavLabel>
-            </ActiveLink>
-          </NavLink>
-          <NavLink>
-            <ActiveLink href="/search" passHref>
-              <NavLabel>Search</NavLabel>
             </ActiveLink>
           </NavLink>
         </NavLinks>
