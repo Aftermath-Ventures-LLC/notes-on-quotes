@@ -6,12 +6,12 @@ export const HeaderContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  marginTop: space(4),
+  marginTop: space(5),
 
   [bp(0)]: {
     flexDirection: 'row',
     alignItems: 'flex-end',
-    marginBottom: space(4),
+    marginBottom: space(5),
     borderBottom: 0,
   },
 });
@@ -21,7 +21,7 @@ export const Content = styled.div({
   flexDirection: 'column',
 
   [bp(0)]: {
-    paddingLeft: space(4),
+    paddingLeft: space(5),
     paddingBottom: space(3),
   },
 });
