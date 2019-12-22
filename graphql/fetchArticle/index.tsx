@@ -2,6 +2,9 @@ import gql from 'graphql-tag';
 
 export interface FetchArticle {
   article: {
+    audioEmbed?: {
+      html: string;
+    };
     citation: string;
     content: object;
     intro: object;
@@ -24,6 +27,7 @@ export interface FetchArticle {
 export const FETCH_ARTICLE = gql`
   query fetchArticle($slug: String!) {
     article(uid: $slug, lang: "en-us") {
+      audioEmbed: audio_embed
       citation
       content
       intro
