@@ -5,6 +5,7 @@ import { RichText } from 'prismic-dom';
 import React from 'react';
 import ArticleHeader from '../../components/ArticleHeader';
 import ArticleIntro from '../../components/ArticleIntro';
+import AudioEmbed from '../../components/AudioEmbed';
 import Content from '../../components/Content';
 import SubscribeCta from '../../components/SubscribeCta';
 import ArticleContainer from '../../elements/ArticleContainer';
@@ -41,11 +42,15 @@ const ArticlePage = () => {
       />
       <ArticleContainer>
         <ArticleIntro
+          hasAudioEmbed={!!article.audioEmbed}
           intro={RichText.asHtml(article.intro)}
           publishedAt={article._meta.publishedAt}
         />
         <SubscribeCta />
         <Content content={RichText.asHtml(article.content)} />
+        {article.audioEmbed && (
+          <AudioEmbed embedHtml={article.audioEmbed.html} />
+        )}
       </ArticleContainer>
     </>
   );

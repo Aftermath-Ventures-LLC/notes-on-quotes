@@ -5,6 +5,7 @@ import Divider from '../Divider';
 import { Content, Header, SocialShareIcons } from './styles';
 
 interface IntroProps {
+  hasAudioEmbed: boolean;
   intro: string;
   publishedAt: string;
 }
@@ -28,7 +29,11 @@ function getSocialShareUrl(type: string) {
   }
 }
 
-const ArticleIntro: FC<IntroProps> = ({ intro, publishedAt }) => {
+const ArticleIntro: FC<IntroProps> = ({
+  hasAudioEmbed,
+  intro,
+  publishedAt,
+}) => {
   const handleShareClick = (type: string) => {
     window.open(
       getSocialShareUrl(type),
@@ -58,6 +63,15 @@ const ArticleIntro: FC<IntroProps> = ({ intro, publishedAt }) => {
         <span>{format(new Date(publishedAt), 'LLLL d, yyyy')}</span>
       </Header>
       <Content dangerouslySetInnerHTML={{ __html: intro }} />
+      <Content>
+        This print interview has been edited, condensed, and annotated.
+        {hasAudioEmbed && (
+          <>
+            {' '}
+            The podcast version is available <a href="#audio-version">below</a>.
+          </>
+        )}
+      </Content>
       <Divider isHiddenDesktop />
     </>
   );
