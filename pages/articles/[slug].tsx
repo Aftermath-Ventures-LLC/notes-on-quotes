@@ -29,10 +29,16 @@ const ArticlePage = () => {
 
   const title = RichText.asText(article.title);
 
+  const pageTitle = article.pageTitle || title;
+
+  const metaDescription =
+    article.metaDescription || RichText.asText(article.intro);
+
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{pageTitle}</title>
+        <meta name="description" content={metaDescription} />
       </Head>
       <ArticleHeader
         citation={article.citation}

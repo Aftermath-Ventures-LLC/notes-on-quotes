@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Container from '../../elements/Container';
 import { bp, color, fontSize, space } from '../../styles/theme';
 
-export const Navigation = styled.div({
+export const Navigation = styled.header({
   position: 'relative',
   zIndex: 100,
   boxShadow: '0 0 4px 1px rgba(0, 0, 0, 0.16)',

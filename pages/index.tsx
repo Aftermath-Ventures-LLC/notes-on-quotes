@@ -23,6 +23,7 @@ const Home = () => {
     <>
       <Head>
         <title>Notes on Quotes</title>
+        <meta name="description" content={homePage.metaDescription} />
       </Head>
       <ArticleContainer>
         <Hero content={RichText.asHtml(homePage.hero)} />

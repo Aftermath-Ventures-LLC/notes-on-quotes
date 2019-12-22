@@ -8,6 +8,8 @@ export interface FetchArticle {
     citation: string;
     content: object;
     intro: object;
+    metaDescription: string;
+    pageTitle: string;
     profileImage: {
       alt: string;
       copyright: string | null;
@@ -31,6 +33,8 @@ export const FETCH_ARTICLE = gql`
       citation
       content
       intro
+      metaDescription: meta_description
+      pageTitle: page_title
       profileImage: profile_image
       quote
       title

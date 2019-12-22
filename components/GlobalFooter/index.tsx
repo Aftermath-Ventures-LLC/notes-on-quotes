@@ -6,17 +6,19 @@ const GlobalFooter = () => {
   const year = new Date().getFullYear();
 
   return (
-    <FooterContainer>
-      <LeftContent>
-        Aftermath Ventures, LLC/Stephen Harrison &copy; {year}. All Rights
-        Reserved.
-      </LeftContent>
-      <RightContent>
-        <Link href="/privacy">
-          <a>Privacy Policy</a>
-        </Link>
-      </RightContent>
-    </FooterContainer>
+    <footer>
+      <FooterContainer>
+        <LeftContent>
+          Aftermath Ventures, LLC/Stephen Harrison &copy; {year}. All Rights
+          Reserved.
+        </LeftContent>
+        <RightContent>
+          <Link href="/privacy">
+            <a>Privacy Policy</a>
+          </Link>
+        </RightContent>
+      </FooterContainer>
+    </footer>
   );
 };
 
