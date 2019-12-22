@@ -10,9 +10,9 @@ const Home = () => {
         <title>Notes on Quotes</title>
       </Head>
       <Container>
-        <ArticlePreview href="pete-adeney-quotes-henry-david-thoreau" />
-        <ArticlePreview href="pete-adeney-quotes-henry-david-thoreau" />
-        <ArticlePreview href="pete-adeney-quotes-henry-david-thoreau" />
+        <ArticlePreview slug="pete-adeney-quotes-henry-david-thoreau" />
+        <ArticlePreview slug="pete-adeney-quotes-henry-david-thoreau" />
+        <ArticlePreview slug="pete-adeney-quotes-henry-david-thoreau" />
       </Container>
     </>
   );
