@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { color, fontSize, space, font } from '../../styles/theme';
 
-export const Container = styled.div({
+export const Container = styled.form({
   marginTop: space(4),
   marginBottom: space(4),
   padding: space(4),
