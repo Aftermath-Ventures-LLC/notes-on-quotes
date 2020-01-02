@@ -21,7 +21,9 @@ const ArticlePreview: FC<ArticlePreviewProps> = ({
   return (
     <Link href="/articles/[slug]" as={`/articles/${slug}`} passHref>
       <Container>
-        <ProfileImage alt={profileImage.alt} src={profileImage.url} />
+        {profileImage && (
+          <ProfileImage alt={profileImage.alt} src={profileImage.url} />
+        )}
         <Content>
           <Title>{title}</Title>
           <Quote dangerouslySetInnerHTML={{ __html: quote }} />
