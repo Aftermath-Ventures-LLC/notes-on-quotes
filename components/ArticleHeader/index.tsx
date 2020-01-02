@@ -15,7 +15,9 @@ interface HeaderProps {
 const ArticleHeader: FC<HeaderProps> = ({ title, profileImage, quote }) => {
   return (
     <HeaderContainer>
-      <ProfileImage alt={profileImage.alt} src={profileImage.url} />
+      {profileImage && (
+        <ProfileImage alt={profileImage.alt} src={profileImage.url} />
+      )}
       <Content>
         <Title>{title}</Title>
         <Quote dangerouslySetInnerHTML={{ __html: quote }} />
