@@ -5,6 +5,7 @@ import Divider from '../Divider';
 import { Content, Header, SocialShareIcons } from './styles';
 
 interface IntroProps {
+  customPublishedAt: string | null;
   hasAudioEmbed: boolean;
   intro: string;
   publishedAt: string;
@@ -30,6 +31,7 @@ function getSocialShareUrl(type: string) {
 }
 
 const ArticleIntro: FC<IntroProps> = ({
+  customPublishedAt,
   hasAudioEmbed,
   intro,
   publishedAt,
@@ -52,6 +54,10 @@ const ArticleIntro: FC<IntroProps> = ({
     );
   };
 
+  const publishDate = (customPublishedAt || publishedAt)
+    .substring(0, 10)
+    .replace('-', '/');
+
   return (
     <>
       <Header>
@@ -60,7 +66,7 @@ const ArticleIntro: FC<IntroProps> = ({
           <FaTwitter onClick={() => handleShareClick('twitter')} />
           <FaShare onClick={() => handleShareClick('mail')} />
         </SocialShareIcons>
-        <span>{format(new Date(publishedAt), 'LLLL d, yyyy')}</span>
+        <span>{format(new Date(publishDate), 'LLLL d, yyyy')}</span>
       </Header>
       <Content dangerouslySetInnerHTML={{ __html: intro }} />
       <Content>

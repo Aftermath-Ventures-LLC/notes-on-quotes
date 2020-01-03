@@ -7,6 +7,7 @@ export interface FetchArticle {
     };
     citation: string;
     content: object;
+    customPublishedAt: string | null;
     intro: object;
     metaDescription: string;
     pageTitle: string;
@@ -32,6 +33,7 @@ export const FETCH_ARTICLE = gql`
       audioEmbed: audio_embed
       citation
       content
+      customPublishedAt: custom_publish_at
       intro
       metaDescription: meta_description
       pageTitle: page_title
