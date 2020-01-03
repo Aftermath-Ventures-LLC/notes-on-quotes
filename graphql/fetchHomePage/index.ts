@@ -5,6 +5,15 @@ export interface FetchHomePage {
     edges: Array<{
       node: {
         hero: object;
+        logo: {
+          alt: string;
+          copyright: string | null;
+          dimensions: {
+            width: number;
+            height: number;
+          };
+          url: string;
+        };
         metaDescription: string;
       };
     }>;
@@ -37,6 +46,7 @@ export const FETCH_HOME_PAGE = gql`
       edges {
         node {
           hero
+          logo
           metaDescription: meta_description
         }
       }

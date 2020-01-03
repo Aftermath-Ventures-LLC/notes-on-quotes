@@ -26,7 +26,7 @@ const Home = () => {
         <meta name="description" content={homePage.metaDescription} />
       </Head>
       <ArticleContainer>
-        <Hero content={RichText.asHtml(homePage.hero)} />
+        <Hero content={RichText.asHtml(homePage.hero)} logo={homePage.logo} />
       </ArticleContainer>
       <Container>
         <h3>Recent interviews</h3>
