@@ -48,6 +48,7 @@ const ArticlePage = () => {
       />
       <ArticleContainer>
         <ArticleIntro
+          customPublishedAt={article.customPublishedAt}
           hasAudioEmbed={!!article.audioEmbed}
           intro={RichText.asHtml(article.intro)}
           publishedAt={article._meta.publishedAt}
