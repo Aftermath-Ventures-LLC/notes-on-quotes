@@ -51,11 +51,7 @@ export const FETCH_HOME_PAGE = gql`
         }
       }
     }
-    articles: _allDocuments(
-      last: 3
-      sortBy: meta_lastPublicationDate_DESC
-      type: "article"
-    ) {
+    articles: allArticles(first: 3, sortBy: custom_publish_at_DESC) {
       edges {
         node {
           ... on Article {
